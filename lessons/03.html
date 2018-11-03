@@ -36,6 +36,94 @@
 		</nav>
 
 		<h4 class = "text-center mt-5 display-4">Lesson 3: Text Alteration and Media</h3>
+		<h5 class = "big-text">
+			<br>
+			In Lesson 2, we used some common HTML elements to form websites with lists and modified text. This session will build off of what you learned in the last lesson and will introduce a few new topics as well. (links, images, and embeds) 
+		</h5>
+
+		<h2 class = "lesson-text mt-5">3.1: Inline text Alteration<hr></h2>
+
+		<p class = "lesson-text pt-2">
+			<code>&lt;sup&gt;...&lt;/sup&gt;</code> : Text on a web page that is superscript.<br>
+			<code>&lt;sub&gt;...&lt;/sub&gt;</code> : Text on a web page that is subscript.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		4.32 * 10&lt;sup&gt;7&lt;/sup&gt;&lt;br&gt;
+		log&lt;sub&gt;3&lt;/sub&gt;32&lt;br&gt;
+		HCO&lt;sub&gt;3&lt;/sub&gt;&lt;sup&gt;-&lt;/sup&gt;
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using superscripts and subscripts.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;small&gt;...&lt;/small&gt;</code> : Text that slightly smaller than normal.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		This text is normal...&lt;br&gt;
+		&lt;small&gt;but this text is small!&lt;/small&gt;
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the small tag.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;mark&gt;...&lt;/mark&gt;</code> : Highlighted text that denotes the significance of a specific segment in a passage.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		Remember to show up at &lt;mark&gt;7:20 AM&lt;/mark&gt; tomorrow!
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the mark tag to highlight important details.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;code&gt;...&lt;/code&gt;</code> : A segment of computer code.<br>
+			<code>&lt;samp&gt;...&lt;/samp&gt;</code> : Sample output from a program or console.<br>
+			<code>&lt;kbd&gt;...&lt;/kbd&gt;</code> : Keyboard input or instructions.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		&lt;code&gt;for(int i = 0; i < 10; i++) {...}&lt;/code&gt; will iterate 10 times.&lt;br&gt;
+		My C++ program kept returning &lt;samp&gt;Segmentation fault (core dumped)&lt;/samp&gt;&lt;br&gt;
+		Press &lt;kbd&gt;Alt+F4&lt;/kbd&gt; to pay respects.
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the code, samp, and kbd tags. Although their output may appear the same initally, it's still generally a good practice to differentiate whenever possible. (We'll cover that more in-depth once we get into our CSS unit)</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;var&gt;...&lt;/var&gt;</code> : Specifies a variable. (This may appear visually similar to <strong>&lt;em&gt;</strong>)<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		&lt;var&gt;y&lt;/var&gt; = &lt;var&gt;ax&lt;sup&gt;2&lt;/sup&gt;&lt;/var&gt; + &lt;var&gt;bx&lt;/var&gt; + &lt;var&gt;c&lt;/var&gt;
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the var tag.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;pre&gt;...&lt;/pre&gt;</code> : Preformatted text that will not ignore preexisting spaces and line breaks.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;body&gt;
+		&lt;pre&gt;
+s p  a   c    e     d
+			t   e  x t
+		is possible if you
+	use    the    pre    tag
+		&lt;/pre&gt;
+	&lt;/body&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the pre tag to manipulate spacing. (Note that the preformatted text segment will start spacing at the exact beginning of each new line)</strong></p>
+
+		<h2 class = "lesson-text mt-5">3.2: External Media<hr></h2>
+
 		<hr>
 		<h2 class = "my-5 px-5">
 			<div class = "container-fluid px-5">
