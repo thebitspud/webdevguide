@@ -1,56 +1,220 @@
 <!DOCTYPE html>
 
 <html lang = "en">
-    <head>
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name = "author" content = "Thebitspud">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name = "author" content = "Thebitspud">
 
-        <!-- Bootstrap CSS -->
-        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
-        <link rel = "icon" type = "image/x-icon" href = "../assets/favicon.ico" />
-        <link href = "../css/guide.css" rel = "stylesheet" type = "text/css" />
-        <title > Lesson 2 - Thebitspud's Webdev Guide </title>
-    </head>
+		<!-- Bootstrap CSS -->
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = "icon" type = "image/x-icon" href = "../assets/favicon.ico" />
+		<link href = "../css/guide.css" rel = "stylesheet" type = "text/css" />
+		<title > Lesson 2 - Thebitspud's Webdev Guide </title>
+	</head>
 
-    <body>
-        <nav class = "navbar navbar-expand-md navbar-dark bg-dark site-navbar">
-            <a class = "navbar-brand" href = "index.html">
-                <img src = "../assets/webdev-logo.png" width = "30" height = "30" class = "d-inline-block align-top" alt = ""> Thebitspud's WebDev Guide
-            </a>
+	<body>
+		<nav class = "navbar navbar-expand-md navbar-dark bg-dark site-navbar">
+			<a class = "navbar-brand" href = "index.html">
+				<img src = "../assets/webdev-logo.png" width = "30" height = "30" class = "d-inline-block align-top" alt = ""> Thebitspud's WebDev Guide
+			</a>
 
-            <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbar-collapse" aria-controls = "navbar-collapse" aria-expanded = "false" aria-label = "Toggle navigation">
-                <span class = "navbar-toggler-icon"></span>
-            </button>
+			<button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbar-collapse" aria-controls = "navbar-collapse" aria-expanded = "false" aria-label = "Toggle navigation">
+				<span class = "navbar-toggler-icon"></span>
+			</button>
 
-            <div class = "collapse navbar-collapse" id = "navbar-collapse">
-                <div class = "navbar-nav nav-fill w-100">
-                    <a class = "nav-item nav-link" href = "../index.html"> Index </a>
-                    <a class = "nav-item nav-link" href = "../intro.html"> Getting Started </a>
-                    <a class = "nav-item nav-link active" href = "../lessons.html"> Lessons
-                        <span class = "sr-only"> (Current Page) </span>
-                    </a>
-                    <a class = "nav-item nav-link" href = "../resources.html"> Resources </a>
-                </div>
-            </div>
-        </nav>
+			<div class = "collapse navbar-collapse" id = "navbar-collapse">
+				<div class = "navbar-nav nav-fill w-100">
+					<a class = "nav-item nav-link" href = "../index.html"> Index </a>
+					<a class = "nav-item nav-link" href = "../intro.html"> Getting Started </a>
+					<a class = "nav-item nav-link active" href = "../lessons.html"> Lessons
+						<span class = "sr-only"> (Current Page) </span>
+					</a>
+					<a class = "nav-item nav-link" href = "../resources.html"> Resources </a>
+				</div>
+			</div>
+		</nav>
 
-        <h4 class = "text-center mt-5 display-4">Lesson 2: Intro to HTML</h3>
+		<h4 class = "text-center mt-5 display-4">Lesson 2: Using HTML Tags</h4>
+		<h5 class = "big-text">
+			<br>
+			In our last class, we learned about HTML elements, tags, and conventions. In this lesson, we will be expanding upon that topic by working with and using various common HTML tags.
+		</h5>
 
-        <div class = "text-center">
-            <h5><a href = "https://github.com/thebitspud/webdevguide" target = "_blank" class = "footer-link-blue">Thebitspud's Webdev Guide 2018/19</a></h5>
-            <a href = "https://thebitspud.github.io" target = "_blank" class = "footer-link-grey pb-5">Site design by Thebitspud</a>
-        </div>
+		<h2 class = "lesson-text mt-5">2.1: HTML Page Structure<hr></h2>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<pre class = "lesson-code">
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;!-- <em>insert document information</em> --&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;!-- <em>insert page content</em> --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+		<p class = "lesson-text mt-3"><strong>Above: The basic outline of an HTML page</strong></p>
+		<h4 class = "lesson-text mt-3">Elements used:</h4>
+		<p class = "lesson-text pt-2">
+			<code>&lt;!DOCTYPE html&gt;</code> : Specifies that the page is written in HTML.<br>
+			<code>&lt;html&gt;...&lt;/html&gt;</code> : Serves as the <strong>root element</strong> of an HTML file.<br>
+			<code>&lt;head&gt;...&lt;/head&gt;</code> : Defines document information and metadata.<br>
+			<code>&lt;body&gt;...&lt;/body&gt;</code> : Specifies all of the actual content of the page.<br>
+			<code>&lt;!-- ... --&gt;</code> : This is an HTML <strong>comment</strong>. It is used to annotate code and share information with other developers. Comments will not affect the output of HTML files.<br>
+		</p>
+
+		<h2 class = "lesson-text mt-4">2.2: Common HTML Elements<hr></h2>
+
+		<p class = "lesson-text pt-2">
+			<code>&lt;title&gt;...&lt;/title&gt;</code> : Defines the title of the web page.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;head&gt;
+		&lt;title&gt;My First Website&lt;/title&gt;
+	&lt;/head&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the title tag in an HTML document. Try it out yourself!</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;p&gt;...&lt;/p&gt;</code> : HTML <strong>paragraphs</strong> are block-level elements that are used for organizing and formatting text. Most web browsers will automatically indent paragraphs and insert breaks at the end.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;body&gt;
+		&lt;p&gt;
+			This is text in a paragraph.
+		&lt;/p&gt;
+	&lt;/body&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using paragraphs in an HTML document.</strong></p>
+
+		<p class = "lesson-text pt-3">
+				<code>&lt;br&gt;</code> : Specifies a <strong>line break</strong>.<br>
+			</p>
+			<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		This is the first line&lt;br&gt;
+		Here is the second line&lt;br&gt;
+		I can have text on separate lines
+		but only if I use a break.
+	&lt;p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using line breaks in an HTML document. (Test it out!)</strong></p>
+
+		<h2 class = "lesson-text mt-4">2.3: Inline Text Elements<hr></h2>
+
+		<p class = "lesson-text pt-2">
+			<code>&lt;h1---h6&gt;...&lt;/h1---h6&gt;</code> : Predefined HTML <strong>headings</strong> in descending order. (<strong>h1</strong> is the largest and <strong>h6</strong> is the smallest)<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;body&gt;
+		&lt;h1&gt;Hey there&lt;/h1&gt;
+		&lt;h2&gt;Welcome to my website!&lt;/h1&gt;
+		&lt;h6&gt;Enjoy your small heading.&lt;/h1&gt;
+	&lt;/body&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the h1, h2, and h6 tags.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;strong&gt;...&lt;/strong&gt;</code> : Text that is <strong>bolded</strong> on a web page.<br>
+			<code>&lt;em&gt;...&lt;/em&gt;</code> : Text that is <strong>italicized</strong> on a web page.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		&lt;strong&gt;This text is bolded.&lt;/strong&gt;&lt;br&gt;
+		&lt;em&gt;This text is italicized.&lt;/em&gt;&lt;br&gt;
+		&lt;strong&gt;This is &lt;em&gt;a combination&lt;/strong&gt; of both!&lt;/em&gt;
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the strong and em tags together in a paragraph.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;del&gt;...&lt;/del&gt;</code> : Text <strong>deleted</strong> from a document after it was created or published. (crossed out)<br>
+			<code>&lt;ins&gt;...&lt;/ins&gt;</code> : Text <strong>inserted</strong> into a document after it was created or published. (underlined)<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;p&gt;
+		&lt;del&gt;This text has been removed.&lt;/del&gt;&lt;br&gt;
+		&lt;ins&gt;This text has been inserted.&lt;/ins&gt;&lt;br&gt;
+		&lt;del&gt;Java&lt;/del&gt; &lt;ins&gt;HTML&lt;/ins&gt; is the best programming language!
+	&lt;/p&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: Using the strong and em tags together in a paragraph.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;ul&gt;...&lt;/ul&gt;</code> : An <strong>unordered list</strong> of items in no specific order. (bulleted)<br>
+			<code>&lt;li&gt;...&lt;/li&gt;</code> : One of any number of <strong>list items</strong> in an ordered or unordered list.<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;body&gt;
+		&lt;p&gt;Things to bring:&lt;/p&gt;
+
+		&lt;ul&gt;
+			&lt;li&gt;Flashlight&lt;/li&gt;
+			&lt;li&gt;Sleeping bag&lt;/li&gt;
+			&lt;li&gt;Water bottle&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/body&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: An unordered list with three list items.</strong></p>
+
+		<p class = "lesson-text pt-3">
+			<code>&lt;ol&gt;...&lt;/ol&gt;</code> : An <strong>ordered list</strong> of items in a designated order. (numbered)<br>
+		</p>
+		<pre class = "lesson-code">
+...
+	&lt;body&gt;
+		&lt;p&gt;My favorite drinks:&lt;/p&gt;
+
+		&lt;ol&gt;
+			&lt;li&gt;Coffee&lt;/li&gt;
+			&lt;li&gt;Green Tea&lt;/li&gt;
+			&lt;li&gt;Orange Juice&lt;/li&gt;
+			&lt;li&gt;Vodka&lt;/li&gt;
+			&lt;li&gt;Water&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/body&gt;
+...</pre>
+		<p class = "lesson-text mt-3"><strong>Above: An ordered list with five list items.</strong></p>
+
+		<hr>
+		<h2 class = "my-5 px-5">
+			<div class = "container-fluid px-5">
+				<div class = "row">
+					<div class = "col-lg-6 text-left">
+						<a href = "01.html" class = "footer-link-grey">&#8592; Lesson 1</a>
+					</div>
+
+					<div class = "col-lg-6 text-right">
+						<a href = "03.html" class = "footer-link-grey">Lesson 3 &#8594;</a>
+					</div>
+				</div>
+			</div>
+		</h2>
+		<hr>
+
+		<div class = "text-center mt-5">
+			<h5><a href = "https://github.com/thebitspud/webdevguide" target = "_blank" class = "footer-link-blue">Thebitspud's Webdev Guide 2018/19</a></h5>
+			<a href = "https://thebitspud.github.io" target = "_blank" class = "footer-link-grey pb-5">Site design by Thebitspud</a>
+		</div>
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin = "anonymous"></script>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin = "anonymous"></script>
-        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin = "anonymous"></script>
-    </body>
+		integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin = "anonymous"></script>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin = "anonymous"></script>
+		<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin = "anonymous"></script>
+	</body>
 </html>
