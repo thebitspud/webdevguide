@@ -40,6 +40,7 @@
 			<br>
 			In our last class, we learned about HTML elements, tags, and conventions. In this lesson, we will be expanding upon that topic by working with and using various common HTML tags.
 		</h5>
+		<br><hr>
 
 		<h2 class = "lesson-text mt-5">2.1: HTML Page Structure<hr></h2>
 
@@ -55,7 +56,7 @@
 		&lt;!-- <em>insert page content</em> --&gt;
 	&lt;/body&gt;
 &lt;/html&gt;</pre>
-		<p class = "lesson-text mt-3"><strong>Above: The basic outline of an HTML page</strong></p>
+		<p class = "lesson-text mt-3"><strong>Above: The basic outline of an HTML page.</strong></p>
 		<h4 class = "lesson-text mt-3">Elements used:</h4>
 		<p class = "lesson-text pt-2">
 			<code>&lt;!DOCTYPE html&gt;</code> : Specifies that the page is written in HTML.<br>
@@ -64,6 +65,7 @@
 			<code>&lt;body&gt;...&lt;/body&gt;</code> : Specifies all of the actual content of the page.<br>
 			<code>&lt;!-- ... --&gt;</code> : This is an HTML <strong>comment</strong>. It is used to annotate code and share information with other developers. Comments will not affect the output of HTML files.<br>
 		</p>
+		<h6 class = "lesson-text"><hr></h6>
 
 		<h2 class = "lesson-text mt-4">2.2: Common HTML Elements<hr></h2>
 
@@ -76,8 +78,9 @@
 		&lt;title&gt;My First Website&lt;/title&gt;
 	&lt;/head&gt;
 ...</pre>
-		<p class = "lesson-text mt-3"><strong>Above: Using the title tag. Try it out yourself!</strong></p>
-
+		<p class = "lesson-text mt-3"><strong>Above: Using the <code>&lt;title&gt;</code> tag in the head element of an HTML document. Try it out yourself!</strong></p>
+		<h6 class = "lesson-text"><hr></h6>
+		
 		<p class = "lesson-text pt-3">
 			<code>&lt;p&gt;...&lt;/p&gt;</code> : HTML <strong>paragraphs</strong> are block-level elements that are used for organizing and formatting text. Most web browsers will automatically indent paragraphs and insert breaks at the end.<br>
 		</p>
@@ -90,7 +93,8 @@
 	&lt;/body&gt;
 ...</pre>
 		<p class = "lesson-text mt-3"><strong>Above: Using paragraphs in an HTML document.</strong></p>
-
+		<h6 class = "lesson-text"><hr></h6>
+		
 		<p class = "lesson-text pt-3">
 				<code>&lt;br&gt;</code> : Specifies a <strong>line break</strong>.<br>
 			</p>
@@ -103,26 +107,28 @@
 		but only if I use a break.
 	&lt;p&gt;
 ...</pre>
-		<p class = "lesson-text mt-3"><strong>Above: Using line breaks. (Test it out!)</strong></p>
+		<p class = "lesson-text mt-3"><strong>Above: Using line breaks in an HTML paragraph.</strong></p>
+		<h6 class = "lesson-text"><hr></h6>
 
 		<h2 class = "lesson-text mt-4">2.3: Inline Text Elements<hr></h2>
 
 		<p class = "lesson-text pt-2">
-			<code>&lt;h1---h6&gt;...&lt;/h1---h6&gt;</code> : Predefined HTML <strong>headings</strong> in descending order. (<strong>h1</strong> is the largest and <strong>h6</strong> is the smallest)<br>
+			<code>&lt;h1---h6&gt;...&lt;/h1---h6&gt;</code> : Predefined HTML <strong>headings</strong> in descending order (<code>&lt;h1&gt;</code> is the largest and <code>&lt;h6&gt;</code> is the smallest). Search engines and other external tools will use headings to determine the structure of your document.<br>
 		</p>
 		<pre class = "lesson-code">
 ...
 	&lt;body&gt;
 		&lt;h1&gt;Hey there&lt;/h1&gt;
-		&lt;h2&gt;Welcome to my website!&lt;/h1&gt;
-		&lt;h6&gt;Enjoy your small heading.&lt;/h1&gt;
+		&lt;h2&gt;Welcome to my website!&lt;/h2&gt;
+		&lt;h6&gt;Enjoy your small heading.&lt;/h6&gt;
 	&lt;/body&gt;
 ...</pre>
-		<p class = "lesson-text mt-3"><strong>Above: Using the h1, h2, and h6 tags.</strong></p>
+		<p class = "lesson-text my-3"><strong>Above: Using the <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h6&gt;</code> tags.</strong></p>
+		<h6 class = "lesson-text"><hr></h6>
 
 		<p class = "lesson-text pt-3">
-			<code>&lt;strong&gt;...&lt;/strong&gt;</code> : Text on a web page that is <strong>important</strong> (bolded). (Use this instead of <strong>&lt;b&gt;</strong>)<br>
-			<code>&lt;em&gt;...&lt;/em&gt;</code> : Text on a web page that is <strong>emphasized</strong> (italicized). (Use this instead of <strong>&lt;i&gt;</strong>)<br>
+			<code>&lt;strong&gt;...&lt;/strong&gt;</code> : Text on a web page that is <strong>important</strong> (bolded). Use this instead of <code>&lt;b&gt;</code>.<br>
+			<code>&lt;em&gt;...&lt;/em&gt;</code> : Text on a web page that is <strong>emphasized</strong> (italicized). Use this instead of <code>&lt;i&gt;</code>.<br>
 		</p>
 		<pre class = "lesson-code">
 ...
@@ -132,11 +138,12 @@
 		&lt;strong&gt;This is &lt;em&gt;a combination&lt;/strong&gt; of both!&lt;/em&gt;
 	&lt;/p&gt;
 ...</pre>
-		<p class = "lesson-text mt-3"><strong>Above: Using the strong and em tags together in a paragraph.</strong></p>
+		<p class = "lesson-text my-3"><strong>Above: Using the <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> tags together in a paragraph.</strong></p>
+		<h6 class = "lesson-text"><hr></h6>
 
 		<p class = "lesson-text pt-3">
-			<code>&lt;del&gt;...&lt;/del&gt;</code> : Text <strong>deleted</strong> from a document after it was created or published. (crossed out)<br>
-			<code>&lt;ins&gt;...&lt;/ins&gt;</code> : Text <strong>inserted</strong> into a document after it was created or published. (underlined)<br>
+			<code>&lt;del&gt;...&lt;/del&gt;</code> : Text <strong>deleted</strong> from a document after it was created or published (crossed out).<br>
+			<code>&lt;ins&gt;...&lt;/ins&gt;</code> : Text <strong>inserted</strong> into a document after it was created or published (underlined).<br>
 		</p>
 		<pre class = "lesson-code">
 ...
@@ -146,10 +153,11 @@
 		&lt;del&gt;Java&lt;/del&gt; &lt;ins&gt;HTML&lt;/ins&gt; is the best programming language!
 	&lt;/p&gt;
 ...</pre>
-		<p class = "lesson-text mt-3"><strong>Above: Using the del and ins tags.</strong></p>
+		<p class = "lesson-text mt-3"><strong>Above: Using the <code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code> tags.</strong></p>
+		<h6 class = "lesson-text"><hr></h6>
 
 		<p class = "lesson-text pt-3">
-			<code>&lt;ul&gt;...&lt;/ul&gt;</code> : An <strong>unordered list</strong> of items in no specific order. (bulleted)<br>
+			<code>&lt;ul&gt;...&lt;/ul&gt;</code> : An <strong>unordered list</strong> of items in no specific order (bulleted).<br>
 			<code>&lt;li&gt;...&lt;/li&gt;</code> : One of any number of <strong>list items</strong> in an ordered or unordered list.<br>
 		</p>
 		<pre class = "lesson-code">
@@ -165,9 +173,10 @@
 	&lt;/body&gt;
 ...</pre>
 		<p class = "lesson-text mt-3"><strong>Above: An unordered list with three list items.</strong></p>
+		<h6 class = "lesson-text"><hr></h6>
 
 		<p class = "lesson-text pt-3">
-			<code>&lt;ol&gt;...&lt;/ol&gt;</code> : An <strong>ordered list</strong> of items. (numbered)<br>
+			<code>&lt;ol&gt;...&lt;/ol&gt;</code> : An <strong>ordered list</strong> of items (numbered).<br>
 		</p>
 		<pre class = "lesson-code">
 ...
@@ -184,7 +193,7 @@
 	&lt;/body&gt;
 ...</pre>
 		<p class = "lesson-text mt-3"><strong>Above: An ordered list with five list items.</strong></p>
-
+		
 		<hr>
 		<h2 class = "my-5 px-5">
 			<div class = "container-fluid px-5">
