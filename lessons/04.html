@@ -156,11 +156,11 @@
 		<h6 class = "lesson-text"><hr></h6>
 
 		<p class = "lesson-text pt-3">
-			<code>&lt;table&gt;...&lt;/table&gt;</code> : A simple <strong>table</strong> that contains corresponding series of information.<br>
-			<code>&lt;caption&gt;...&lt;/caption&gt;</code> : The <strong>title</strong> of a table.<br>
-			<code>&lt;tr&gt;...&lt;/tr&gt;</code> : A <strong>table row</strong> that contains data about a piece of information.<br>
-			<code>&lt;th&gt;...&lt;/th&gt;</code> : A <strong>table header</strong> that contains information about a set of information.<br>
-			<code>&lt;td&gt;...&lt;/td&gt;</code> : A <strong>table division</strong> that contains point data.<br>
+			<code>&lt;table&gt;...&lt;/table&gt;</code> : A simple <strong>table</strong> that contains rows and columns of information.<br>
+			<code>&lt;caption&gt;...&lt;/caption&gt;</code> : The <strong>title</strong> of the table.<br>
+			<code>&lt;tr&gt;...&lt;/tr&gt;</code> : A <strong>table row</strong> that contains multiple table divisions.<br>
+			<code>&lt;th&gt;...&lt;/th&gt;</code> : A <strong>table header</strong> that specifies information categories.<br>
+			<code>&lt;td&gt;...&lt;/td&gt;</code> : A <strong>table division</strong> that contains relevant data.<br>
 		</p>
 		<pre class = "lesson-code">
 ...
@@ -170,29 +170,42 @@
 				
 			&lt;tr&gt;
 				&lt;th&gt;Month&lt;/th&gt;
-				&lt;th&gt;Money&lt;/th&gt;
+				&lt;th&gt;Savings&lt;/th&gt;
+				&lt;th&gt;Expenditures&lt;/th&gt;
+				&lt;th&gt;Net Gain/Loss&lt;/th&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 				&lt;td&gt;January&lt;/td&gt;
-				&lt;td&gt;$80&lt;/td&gt;
+				&lt;td&gt;$350&lt;/td&gt;
+				&lt;td&gt;$300&lt;/td&gt;
+				&lt;td&gt;+$50&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 				&lt;td&gt;February&lt;/td&gt;
-				&lt;td&gt;$100&lt;/td&gt;
+				&lt;td&gt;$650&lt;/td&gt;
+				&lt;td&gt;$400&lt;/td&gt;
+				&lt;td&gt;+$150&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 				&lt;td&gt;March&lt;/td&gt;
-				&lt;td&gt;$150&lt;/td&gt;
+				&lt;td&gt;$500&lt;/td&gt;
+				&lt;td&gt;$600&lt;/td&gt;
+				&lt;td&gt;-$100&lt;/td&gt;
 			&lt;/tr&gt;
-			&lt;tr>
-				&lt;td>April&lt;/td>
-				&lt;td>$140&lt;/td>
-			&lt;/tr>
 		&lt;/table>
 	&lt;body&gt;
 ...</pre>
-		<p class = "lesson-text mt-3"><strong>Above: Creating a simple table using the <code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements.</strong></p>
+		<p class = "lesson-text mt-3"><strong>Above: Creating a simple table with 4 rows and 4 columns using the <code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements.</strong></p>
 		<h6 class = "lesson-text"><hr></h6>
+
+		<h2 class = "lesson-text mt-5">4.3: Using Reserved Characters<hr></h2>
+		<p class = "lesson-text">There are many characters that are not easy to type  or cannot be directly used in an HTML document due to interpretation issues. This includes fairly common symbols such as &amp;, &lt;, &gt;, and &quot;. Fortunately, the vast majority of these symbols can be accessed and used by calling their entity names or ids. For instance, &lt; has the designated entity name of &amp;lt;<br>
+		<br>
+		To learn more about reserved characters or to find a list of their entity values, refer to the link below:</p>
+
+		<h4 class = "big-text text-center my-5">
+			<a href = "https://www.html.am/reference/html-special-characters.cfm" target = "_blank" class = "footer-link-blue">HTML Special Characters</a>
+		</h4>
 
 		<hr>
 		<h2 class = "my-5 px-5">
