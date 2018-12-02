@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Thebitspud">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+		<link href="../css/guide.css" rel="stylesheet" type="text/css" />
+		<title > Lesson 6 - WebDevGuide </title>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark site-navbar">
+			<a class="navbar-brand" href="index.html">
+				<img src="../assets/webdev-logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> WebDevGuide
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<div class="navbar-nav nav-fill w-100">
+					<a class="nav-item nav-link" href="../index.html"> Index </a>
+					<a class="nav-item nav-link" href="../intro.html"> Getting Started </a>
+					<a class="nav-item nav-link active" href="../lessons.html"> Lessons
+						<span class="sr-only"> (Current Page) </span>
+					</a>
+					<a class="nav-item nav-link" href="../resources.html"> Resources </a>
+				</div>
+			</div>
+		</nav>
+
+		<h4 class="text-center mt-5 display-4">Lesson 6: Divisions and Attributes</h4>
+		<h5 class="big-text">
+			<br>
+			Now that you have an understanding of what HTML is and how to use it, we will be moving into our next unit, which is centered around the usage of CSS in stylizing web pages. In this lesson, we will be learning about what CSS is, basic usage, and some common properties.
+		</h5>
+		<br><hr>
+
+		<h2 class="lesson-text mt-5">6.1: What is CSS?<hr></h2>
+
+		<p class="lesson-text">
+			CSS stands for <strong>Cascading Style Sheets</strong>. It is a simple and versatile language that is used by web developers to alter the display and style of content on web pages. CSS can be used to change the properties (size, alignment, color, etc) of any given HTML element to improve page layout and aesthetic. As such, it is crucial for any aspiring web develper to understand how to use CSS to modify HTML documents.<br>
+			<br>
+			As was briefly covered in our previous lesson, CSS is organized into <em>property:value</em> pairings. The image below may better illustrate the standard syntax of a CSS ruleset.
+		</p>
+
+		<div class="text-center">
+			<img class="lesson-img w-40" src="../assets/w3-css-syntax.png">
+		</div>
+
+		<p class="lesson-text mt-3"><strong>Above: The various components of a CSS ruleset.</strong> Courtesy of <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.</p>
+
+		<p class="lesson-text">
+			<br>
+			As mentioned in our last lesson, there are three ways to implement CSS in a web page. <br>
+			<br>
+			<strong>Inline Style Sheet</strong>: Use the <code>style="..."</code> attribute inside the opening tag of an element to modify its properties. We covered the usage of inline CSS in our last lesson.<br>
+			<br>
+			<strong>Internal Style Sheet</strong>: Insert a <code>&lt;style&gt;...&lt;/style&gt;</code> element into the <code>&lt;head&gt;</code> tag of your HTML file to use an internal style sheet. This type of CSS only applies to a single page, but it allows you to easily modify how that page is displayed with classes, IDs, and special selectors. This type of style sheet was also covered in lesson 5.<br>
+			<br>
+			<strong>External Style Sheet</strong>: This is the final type of style sheet and the one that the vast majority of websites use. The advantage of having an external style sheet is that you can have multiple files using the same CSS layout without having to copy/paste a long CSS file into each new HTML page. To use an external style sheet, create a file that ends with .css and place it in a directory that you can easily find (preferably in a subfolder of your project). Once you have created a CSS file, use a <code>&lt;link href="..." rel="stylesheet" type="text/css"&gt;</code> element to link to said file.
+		</p>
+
+		<pre class="lesson-code">
+<p class="text-center">.../project/index.html</p><hr>...
+	&lt;head&gt;
+		...
+		&lt;link href="styles/project.css" rel="stylesheet" type="text/css"&gt;
+		...
+	&lt;/head&gt;
+...</pre>
+<br>
+		<pre class="lesson-code">
+<p class="text-center">.../project/styles/project.css</p><hr>body {
+	color: white;
+	background-color: black;
+	font-family: monospace;
+}</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>&lt;link&gt;</code> tag and a .css file to link up an external style sheet to an HTML page.</strong></p>
+
+		<h2 class="lesson-text mt-5">6.2: Syntax and Selectors<hr></h2>
+
+		<p class="lesson-text">
+			<code>element {</code> : Selects every element of the specified type.<br><br>
+			<code>.class {</code> : Selects all elements containing the specified class.<br><br>
+			<code>#id {</code> : Selects the element with the specified ID.<br><br>
+			<code>element1, element2 {</code> : Selects all elements of type 1 and all elements of type 2. More than 2 elements can be selected with this syntax pattern. Additionally, multiple classes or IDs can also be selected in this fashion.<br><br>
+			<code>element1 element2 {</code> : Only selects elements of type 2 that are inside elements of type 1.<br><br>
+			<code>[...].class {</code> : <br><br>
+			<code>[...]#id {</code> : <br><br>
+			<code>[...]:pseudo-class {</code>: <br><br>
+			<code>[...]::pseudo-element {</code> :
+		</p>
+
+		<h2 class="lesson-text mt-5">6.3: Common CSS Properties<hr></h2>
+
+		<hr>
+		<h2 class="my-5 px-5">
+			<div class="container-fluid px-5">
+				<div class="row">
+					<div class="col-lg-6 text-left">
+						<a href="05.html" class="footer-link-grey">&#8592; Lesson 5</a>
+					</div>
+
+					<div class="col-lg-6 text-right">
+						<!--<a href="07.html" class="footer-link-grey">Lesson 7 &#8594;</a>-->
+					</div>
+				</div>
+			</div>
+		</h2>
+		<hr>
+		<div class="text-center mt-5">
+			<h5><a href="https://github.com/webdevguide/webdevguide.github.io" target="_blank" class="footer-link-blue">WebDevGuide 2018/19</a></h5>
+			<a href="https://thebitspud.github.io" target="_blank" class="footer-link-grey pb-5">Site design by Thebitspud</a>
+		</div>
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	</body>
+</html>

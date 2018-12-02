@@ -1,76 +1,252 @@
 <!DOCTYPE html>
 
-<html lang = "en">
+<html lang="en">
 	<head>
-		<meta charset = "utf-8">
-		<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name = "author" content = "Thebitspud">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Thebitspud">
 
 		<!-- Bootstrap CSS -->
-		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
-		<link rel = "icon" type = "image/x-icon" href = "../assets/favicon.ico" />
-		<link href = "../css/guide.css" rel = "stylesheet" type = "text/css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+		<link href="../css/guide.css" rel="stylesheet" type="text/css" />
 		<title > Lesson 5 - WebDevGuide </title>
 	</head>
 
 	<body>
-		<nav class = "navbar navbar-expand-md navbar-dark bg-dark site-navbar">
-			<a class = "navbar-brand" href = "index.html">
-				<img src = "../assets/webdev-logo.png" width = "30" height = "30" class = "d-inline-block align-top" alt = ""> WebDevGuide
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark site-navbar">
+			<a class="navbar-brand" href="index.html">
+				<img src="../assets/webdev-logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> WebDevGuide
 			</a>
 
-			<button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbar-collapse" aria-controls = "navbar-collapse" aria-expanded = "false" aria-label = "Toggle navigation">
-				<span class = "navbar-toggler-icon"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class = "collapse navbar-collapse" id = "navbar-collapse">
-				<div class = "navbar-nav nav-fill w-100">
-					<a class = "nav-item nav-link" href = "../index.html"> Index </a>
-					<a class = "nav-item nav-link" href = "../intro.html"> Getting Started </a>
-					<a class = "nav-item nav-link active" href = "../lessons.html"> Lessons
-						<span class = "sr-only"> (Current Page) </span>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<div class="navbar-nav nav-fill w-100">
+					<a class="nav-item nav-link" href="../index.html"> Index </a>
+					<a class="nav-item nav-link" href="../intro.html"> Getting Started </a>
+					<a class="nav-item nav-link active" href="../lessons.html"> Lessons
+						<span class="sr-only"> (Current Page) </span>
 					</a>
-					<a class = "nav-item nav-link" href = "../resources.html"> Resources </a>
+					<a class="nav-item nav-link" href="../resources.html"> Resources </a>
 				</div>
 			</div>
 		</nav>
 
-		<h4 class = "text-center mt-5 display-4">Lesson 5: Divisions and Attributes</h4>
-		<h5 class = "big-text">
+		<h4 class="text-center mt-5 display-4">Lesson 5: Styling and Attributes</h4>
+		<h5 class="big-text">
 			<br>
-			Now that you have a baseline understanding of what HTML is and how it is used, we will being moving into our next unit.
+			So far, we have learned about how to create HTML pages from scratch and add various types of content using both inline and block-level elements. In this lesson, we will be learning about utilizing HTML divisions, attributes, and values. Along with that, we will begin working with CSS stylization to alter the presentation of content on a website.
 		</h5>
 		<br><hr>
 
+		<h2 class="lesson-text mt-5">5.1: Styling Attributes<hr></h2>
+
+		<p class="lesson-text pt-2">
+			In our last few lessons, we worked with some basic attributes in HTML. Attributes are used in tags to provide contextual information to elements and follow the name/content convention pattern of <code>  <var>attribute</var>="<var>value</var>"</code>. A tag may have more than one assigned attribute and in certain cases (such as with <code>class="..."</code>) an attribute may extend multiple values. Some of the attributes we have already covered in this course include <code>href="..."</code>, <code>src="..."</code>, <code>width="..."</code>, and <code>height="..."</code>.<br>
+			
+			<br>
+			One very useful attribute we have not yet utilized is the <code>style="..."</code> attribute. Styles use inline CSS (which we will learn more about later on) to change the appearance of specific elements. Multiple content values can be used with a style attribute by separating them with a <code>;</code><br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;body&gt;
+		...
+		&lt;p style="background-color:lightblue"&gt;
+			The background of this paragraph is blue now!
+		&lt;/p&gt;
+
+		&lt;p style="background-color:black; color:white"&gt;
+			This paragraph has white on black text now!
+		&lt;/p&gt;
+		...
+	&lt;/body&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>style="..."</code> attribute.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
+		<p class="lesson-text pt-3">
+			Another attribute we have not covered so far is the <code>class="..."</code> attribute, which specifies styling for multiple similar elements. To declare the style of a class, you must use either an internal style sheet and the <code>&lt;style&gt;</code> tag or an external style sheet in a separate .css file that is referenced by a <code>&lt;link&gt;</code> tag. We will be covering the specifics of style sheets in our next lesson (copy/pasting CSS elements will work for now). Regardless of which you choose, you need to have a CSS selector that contains <code>.<em>classname</em> {</code> within your style sheet.<br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;head&gt;
+		...
+		&lt;style&gt;
+			.bg-red {
+				color: white; 
+				background-color: red;
+				font-family: Verdana, Tahoma, sans-serif;
+				padding: 10px;
+			}
+		&lt;/style&gt;
+		...
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		...
+		&lt;p class="bg-red"&gt;
+			This paragraph is red with white text!
+		&lt;/p&gt;
+		...
+	&lt;/body&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>class="..."</code> attribute and an inline style sheet to change how an HTML file is displayed.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
+		<p class="lesson-text pt-3">
+			Similarly, the <code>id="..."</code> attribute can be used with either an internal or external style sheet for specifying the content of a single element. HTML IDs typically used to identify unique sections on a page to be used with JavaScript. However, IDs will <strong>not</strong> work properly if you specify the same ID for multiple elements. The CSS selector for an ID is <code>#<em>id-name</em> {</code><br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;head&gt;
+		...
+		&lt;style&gt;
+			#bg-gray {
+				color: white; 
+				background-color: gray;
+				font-family: Verdana, Tahoma, sans-serif;
+				padding: 2%;
+			}
+		&lt;/style&gt;
+		...
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		...
+		&lt;p id="bg-gray"&gt;
+			This paragraph is gray with white text!
+		&lt;/p&gt;
+		...
+	&lt;/body&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>id="..."</code> attribute and an inline style sheet to change how an HTML file is displayed.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
+		<h2 class="lesson-text mt-5">5.2: Spans and Divisions<hr></h2>
+
+		<p class="lesson-text pt-2">
+			<code>&lt;span&gt;...&lt;/span&gt;</code> : Used for specifying an inline section within a document that has modified CSS. The <code>&lt;span&gt;</code> tag effectively acts as a blank slate that does not have any predesignated attributes of its own. <br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;style&gt;
+		.text-green {
+			color: green;
+			font-family: monospace;
+			font-size: 13px;
+		}
+	&lt;/style&gt;
+...
+	&lt;p&gt;
+		Look at this &lt;span class="text-green"&gt;modified text&lt;/span&gt;!
+	&lt;/p&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>&lt;span&gt;</code> tag to change the color of a specific text segment.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
+		<p class="lesson-text pt-3">
+			<code>&lt;div&gt;...&lt;/div&gt;</code> : Divisions are empty block-level containers that are used to alter entire sections of a web page. A <code>&lt;div&gt;</code> element is the block-level equivalent of a <code>&lt;span&gt;</code> tag. <br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;style&gt;
+		.bg-black {
+			color: white;
+			background-color: black;
+			font-family: monospace;
+			padding: 10px;
+			margin-top: 100px;
+			margin: auto;
+		}
+	&lt;/style&gt;
+...
+	&lt;div class="bg-black"&gt;
+		Divisions are very cool and can be used in many interesting ways!
+	&lt;/div&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>&lt;div&gt;</code> tag to modify an HTML block. More complex use cases will be covered in future lessons.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
+		<h2 class="lesson-text mt-5">5.3: Miscellaneous HTML<hr></h2>
+
+		<p class="lesson-text pt-2">
+			<code>&lt;iframe src="..."&gt;...&lt;/iframe&gt;</code> : An inline frame that is used to embed and display content directly from another website or document. It is recommended to specify a size for the <code>&lt;iframe&gt;</code> element either directly in the opening tag or in a style sheet elsewhere. If you insert text between the opening and closing tags or add a <code>name="..."</code> attribute, it will be displayed if the <code>&lt;iframe&gt;</code> is unable to properly show the website.<br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;body&gt;
+		&lt;iframe src="https://vikingsdev.github.io/" width="800" height="500"&gt;VikingsDev&lt;/iframe&gt;
+	&lt;/body&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Above: Using the <code>&lt;iframe&gt;</code> element to embed a website.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
+		<p class="lesson-text pt-3">
+			The following elements are all used to specify <code>&lt;head&gt;</code> element data.<br>
+			<br>
+			<code>&lt;meta&gt;</code> : Used to specify metadata about the page. Content within a <code>&lt;meta&gt;</code> tag serves various special functions such as specifying a document charset or helping search engines find and index pages.<br>
+			<code>&lt;style&gt;...&lt;/style&gt;</code> : Defines an internal CSS style sheet.<br>
+			<code>&lt;script&gt;...&lt;/script&gt;</code> : Links to an external JavaScript file<br>
+			<code>&lt;link href="..." rel="..." type="..."&gt;</code> : Links to an external file (CSS files, icons, CDN libraries, etc.)<br>
+		</p>
+		<pre class="lesson-code">
+...
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta name="author" content="Thebitspud"&gt;
+
+		&lt;style&gt;
+			body {
+				color: white;
+				background-color: blue;
+				font-family: monospace;
+			}
+		&lt;/style&gt;
+
+		&lt;script&gt;
+			document.getElementById("center-div").innerHTML="Is this JavaScript?";
+		&lt;/script&gt;
+
+		&lt;script src="script.js" type="text/javascript"&gt;&lt;/script&gt;
+
+		&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;
+	&lt;/head&gt;
+...</pre>
+		<p class="lesson-text mt-3"><strong>Using the <code>&lt;meta&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;link&gt;</code> elements.</strong></p>
+		<h6 class="lesson-text"><hr></h6>
+
 		<hr>
-		<h2 class = "my-5 px-5">
-			<div class = "container-fluid px-5">
-				<div class = "row">
-					<div class = "col-lg-6 text-left">
-						<a href = "04.html" class = "footer-link-grey">&#8592; Lesson 4</a>
+		<h2 class="my-5 px-5">
+			<div class="container-fluid px-5">
+				<div class="row">
+					<div class="col-lg-6 text-left">
+						<a href="04.html" class="footer-link-grey">&#8592; Lesson 4</a>
 					</div>
 
-					<div class = "col-lg-6 text-right">
-						<!--<a href = "06.html" class = "footer-link-grey">Lesson 6 &#8594;</a>-->
+					<div class="col-lg-6 text-right">
+						<a href="06.html" class="footer-link-grey">Lesson 6 &#8594;</a>
 					</div>
 				</div>
 			</div>
 		</h2>
 		<hr>
-		<div class = "text-center mt-5">
-			<h5><a href = "https://github.com/webdevguide/webdevguide.github.io" target = "_blank" class = "footer-link-blue">WebDevGuide 2018/19</a></h5>
-			<a href = "https://thebitspud.github.io" target = "_blank" class = "footer-link-grey pb-5">Site design by Thebitspud</a>
+		<div class="text-center mt-5">
+			<h5><a href="https://github.com/webdevguide/webdevguide.github.io" target="_blank" class="footer-link-blue">WebDevGuide 2018/19</a></h5>
+			<a href="https://thebitspud.github.io" target="_blank" class="footer-link-grey pb-5">Site design by Thebitspud</a>
 		</div>
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin = "anonymous"></script>
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin = "anonymous"></script>
-		<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin = "anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
 	</body>
 </html>
