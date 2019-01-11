@@ -15,7 +15,7 @@
 
 	<body>
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark site-navbar">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="index">
 				<img src="../assets/webdev-logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> WebDevGuide
 			</a>
 
@@ -25,12 +25,12 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<div class="navbar-nav nav-fill w-100">
-					<a class="nav-item nav-link" href="../index.html"> Index </a>
-					<a class="nav-item nav-link" href="../intro.html"> Getting Started </a>
-					<a class="nav-item nav-link active" href="../lessons.html"> Lessons
+					<a class="nav-item nav-link" href="../index"> Index </a>
+					<a class="nav-item nav-link" href="../intro"> Getting Started </a>
+					<a class="nav-item nav-link active" href="../lessons"> Lessons
 						<span class="sr-only"> (Current Page) </span>
 					</a>
-					<a class="nav-item nav-link" href="../resources.html"> Resources </a>
+					<a class="nav-item nav-link" href="../resources"> Resources </a>
 				</div>
 			</div>
 		</nav>
@@ -45,7 +45,7 @@
 		<h2 class="lesson-text mt-5">6.1: What is CSS?<hr></h2>
 
 		<p class="lesson-text">
-			CSS stands for <strong>Cascading Style Sheets</strong>. It is a simple and versatile language that is used by web developers to alter the display and style of content on web pages. CSS can be used to change the properties (size, alignment, color, etc) of any given HTML element to improve page layout and aesthetic. As such, it is crucial for any aspiring web develper to understand how to use CSS to modify HTML documents.<br>
+			CSS stands for <strong>Cascading Style Sheets</strong>. It is a simple and versatile language that is used by web developers to alter the display of content on web pages. CSS can be used to change the properties (size, alignment, color, etc) of any given HTML element to improve page layout and aesthetic. As such, it is crucial for any aspiring web develper to understand how to use CSS to modify HTML documents.<br>
 			<br>
 			As was briefly covered in our previous lesson, CSS is organized into <em>property:value</em> pairings. The image below may better illustrate the standard syntax of a CSS ruleset.
 		</p>
@@ -56,8 +56,8 @@
 
 		<p class="lesson-text mt-3"><strong>Above: The various components of a CSS ruleset.</strong> Courtesy of <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.</p>
 
+		<h6 class="lesson-text"><hr></h6>
 		<p class="lesson-text">
-			<br>
 			As mentioned in our last lesson, there are three ways to implement CSS in a web page. <br>
 			<br>
 			<strong>Inline Style Sheet</strong>: Use the <code>style="..."</code> attribute inside the opening tag of an element to modify its properties. We covered the usage of inline CSS in our last lesson.<br>
@@ -90,26 +90,28 @@
 			<code>element {</code> : Selects every element of the specified type.<br><br>
 			<code>.class {</code> : Selects all elements containing the specified class.<br><br>
 			<code>#id {</code> : Selects the element with the specified ID.<br><br>
-			<code>element1, element2 {</code> : Selects all elements of type 1 and all elements of type 2. More than 2 elements can be selected with this syntax pattern. Additionally, multiple classes or IDs can also be selected in this fashion.<br><br>
-			<code>element1 element2 {</code> : Only selects elements of type 2 that are inside elements of type 1.<br><br>
-			<code>[...].class {</code> : <br><br>
-			<code>[...]#id {</code> : <br><br>
-			<code>[...]:pseudo-class {</code>: <br><br>
-			<code>[...]::pseudo-element {</code> :
+			<code>selector1, selector2 {</code> : Selects all elements of type 1 and all elements of type 2. More than 2 elements can be selected with this syntax pattern. Additionally, multiple classes or IDs can also be selected in this fashion.<br><br>
+			<code>selector1 selector2 {</code> : Only selects elements of type 2 that are inside elements of type 1. This also works with classes and IDs.<br><br>
+			<code>selector:pseudo-class {</code>: Temporarily selects an element if the element is in a certain state.<br><br>
+			<code>selector::pseudo-element {</code> : Selects matching elements that meet specific placement conditions.
+			<br>
+			<br>There are many
 		</p>
 
 		<h2 class="lesson-text mt-5">6.3: Common CSS Properties<hr></h2>
+
+		https://htmlcolorcodes.com/color-names/
 
 		<hr>
 		<h2 class="my-5 px-5">
 			<div class="container-fluid px-5">
 				<div class="row">
 					<div class="col-lg-6 text-left">
-						<a href="05.html" class="footer-link-grey">&#8592; Lesson 5</a>
+						<a href="05" class="footer-link-grey">&#8592; Lesson 5</a>
 					</div>
 
 					<div class="col-lg-6 text-right">
-						<!--<a href="07.html" class="footer-link-grey">Lesson 7 &#8594;</a>-->
+						<!--<a href="07" class="footer-link-grey">Lesson 7 &#8594;</a>-->
 					</div>
 				</div>
 			</div>
